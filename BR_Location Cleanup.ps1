@@ -15,7 +15,7 @@ $headers = @{
 
 $taskSavedSearch = Invoke-RestMethod -Method 'GET' -Uri 'https://saasit.com/api/odata/businessobject/Locations'-Headers $headers
 
-$JSONResponse = (ConvertTo-Json $taskSavedSearch) | Out-File "C:\Users\misl7603\Desktop\Scripts\onboardTasks.json"
+$JSONResponse = (ConvertTo-Json $taskSavedSearch) | Out-File "location.json"
 $value = $JSONResponse | ConvertFrom-Json
 
 $locationName = $value.value.BR_Name
